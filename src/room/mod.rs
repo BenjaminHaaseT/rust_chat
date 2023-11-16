@@ -7,13 +7,13 @@ use tokio::sync::broadcast::{Sender as TokioBroadcastSender, Receiver as TokioBr
 use async_std::channel::{Receiver as AsyncStdReceiver, Sender as AsyncStdSender};
 use crate::*;
 
-// Rough outline of needed ingredients for chatroom task
+// Rough outline of needed ingredients for chatroom broker task
 pub struct Chatroom {
     name: String,
     id: Uuid,
     peers: HashMap<Uuid, String>,
     // message_sender: TokioBroadcastSender<Message>,
-    // message_receiver: TokioBroadcastReceiver<Message>,
+    // message_receiver: AsyncStdReceiver<Message>,
     // client_receiver: AsyncStdReceiver<Client>,
     // client_disconnect_receiver: AsyncStdReceiver<(Client, AsyncStdSender<Empty>)>
 
