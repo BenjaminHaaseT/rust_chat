@@ -3,6 +3,10 @@
 use std::fmt::{Debug, Display, Formatter};
 use std::error::Error;
 
+pub mod prelude {
+    pub use super::*;
+}
+
 #[derive(Debug)]
 pub enum ServerError {
 
